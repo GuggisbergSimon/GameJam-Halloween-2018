@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Networking;
 
 public class SatelliteControllerParabole : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class SatelliteControllerParabole : MonoBehaviour
 	{
 		float A = amplitude;
 		float B = (2 * Mathf.PI)/period;
+		myRigidbody2D.velocity = Vector2.up* A * Mathf.Sin(B * Time.time) + Vector2.left * speed;
 	}
 
 	void OnTriggerEnter2D(Collider2D other)

@@ -20,13 +20,14 @@ public class SatelliteControllerMountain : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		//this code stinks
 		Vector2 myVelocity = Vector2.up;
-		if (height < amplitude)
+		if (height < amplitude*2)
 		{
 			height++;
 			myVelocity *= speed;
 		}
-		else if (amplitude <= height && height < 2*amplitude)
+		else if (amplitude*2 <= height && height < 4*amplitude)
 		{
 			height++;
 			myVelocity *= -speed;
