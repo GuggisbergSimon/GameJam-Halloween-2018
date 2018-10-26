@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Void
+    uniqueID: 2205498247
+    locked: 0
+  - name: BackGround1
+    uniqueID: 2765601219
+    locked: 0
+  - name: BackGround2
+    uniqueID: 2135524175
+    locked: 0
+  - name: BackGround3
+    uniqueID: 293673811
+    locked: 0
