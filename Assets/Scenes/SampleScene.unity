@@ -210,8 +210,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4705321168209936, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114456884324879540, guid: 7981142897d45e943bdc0656eba31b14,
+        type: 2}
+      propertyPath: Enemy.Array.data[2]
+      value: 
+      objectReference: {fileID: 1401287978091316, guid: fab6b2e1e08529941905a1c9bf9648a3,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
   m_IsPrefabAsset: 0

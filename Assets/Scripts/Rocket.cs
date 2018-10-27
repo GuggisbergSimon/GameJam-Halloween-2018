@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rocket : MonoBehaviour
+public class Rocket : Enemy
 {
     [SerializeField] private float speed = 10;
-    private Transform targetTransform;
+	[SerializeField] private float distanceMin = -3;
+	private Transform targetTransform;
     private Rigidbody2D myRigidbody2D;
-    [SerializeField] private float distanceMin = -3;
+
     void Start()
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
