@@ -24,8 +24,7 @@ public class GameManager : MonoBehaviour
 	{
 		if (player.life <= 0)
 		{
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-			//play animation or whatever, wait for it to end and go to scene gameover
+			SceneManager.LoadScene("GameOver");
 		}
 	}
 
@@ -33,8 +32,7 @@ public class GameManager : MonoBehaviour
 	{
 		if (Time.timeSinceLevelLoad>timeMax)
 		{
-			//SceneManager.LoadScene(SceneManager.GetSceneByName("WinScene"));
-			//play animation for end, wait for it to end and go to scene victory
+			SceneManager.LoadScene("WinScene");
 		}
 	}
 }

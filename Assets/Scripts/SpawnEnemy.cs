@@ -7,8 +7,8 @@ public class SpawnEnemy : MonoBehaviour
     public  GameObject [] Enemy;
 
     private int y;
-    private float nextActionTime = 5f;
-    public float period = 0.1f;
+    [SerializeField] private float nextActionTime = 5f;
+    [SerializeField] private float period = 0.1f;
     
     // Use this for initialization
     void Start ()
