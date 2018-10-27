@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 58395355381552572}
   - component: {fileID: 50675375186276182}
   - component: {fileID: 114733030394722536}
+  - component: {fileID: 95605827965157654}
   m_Layer: 10
   m_Name: MeteorInertie
   m_TagString: Player
@@ -108,6 +109,24 @@ CircleCollider2D:
   m_Offset: {x: -0.31, y: 0}
   serializedVersion: 2
   m_Radius: 2.25
+--- !u!95 &95605827965157654
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1832368583629202}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5093e803033d27943861e4df53e1499a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114733030394722536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,10 +139,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 100
-  shakeForce: 10
-  shakeTime: 20
+  shakeForce: 0
   moveForce: 500
   maxSpeed: 10
+  maxTimeInvicibility: 100
   vcam: {fileID: 0}
   noise: {fileID: 0}
 --- !u!212 &212450428493777870
