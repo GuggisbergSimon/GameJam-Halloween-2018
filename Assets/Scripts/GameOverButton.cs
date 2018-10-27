@@ -19,7 +19,7 @@ public class GameOverButton : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetButtonDown("Play"))
+        if (Input.GetButtonDown("Play") || Input.GetButtonDown("Retry"))
         {
             YesButton();
         }
