@@ -11,12 +11,6 @@ public class MenuPause : MonoBehaviour {
     [SerializeField]private GameObject pauseCanvas;
     
 
-    void Start()
-    {
-        pauseCanvas.SetActive(false);
-    }
-
-
     public void ActivePause ()
     {
         Time.timeScale = 0f;
@@ -31,6 +25,7 @@ public class MenuPause : MonoBehaviour {
 
     public void Retry()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("SampleScene");
     }
 

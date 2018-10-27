@@ -10,11 +10,16 @@ public class Player : MonoBehaviour
 	public int life = 100;
 	[SerializeField] private float moveForce = 365f;
 	[SerializeField] private float maxSpeed = 10f;
+    [SerializeField] private float maxTimeInvicibility = 100;
+    private bool invincibility = false;
+    private float timeInvicibility;
 
-	// Use this for initialization
-	void Start()
+    private Animator playerAnimator;
+    // Use this for initialization
+    void Start()
 	{
 		rb2d = GetComponent<Rigidbody2D>();
+	    playerAnimator = GetComponent<Animator>();
 	}
 
 	void FixedUpdate()
@@ -44,15 +49,39 @@ public class Player : MonoBehaviour
 		{
 			rb2d.velocity = new Vector2(0, 0);
 		}
+
+	    if (invincibility)
+	    {
+            playerAnimator.SetBool("Invincibility", true);
+	        timeInvicibility -= 1;
+	        if (timeInvicibility <= 0)
+	        {
+	            invincibility = false;
+	            playerAnimator.SetBool("Invincibility", false);
+                //Debug.Log("Vincible");
+            }
+	    }
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.gameObject.tag == "Enemy")
 		{
-		    life -= collision.gameObject.GetComponent<Enemy>().damage;
-            print(life);
+		    Damage(collision.gameObject.GetComponent<Enemy>().damage);
+            
 			Destroy(collision.gameObject);
 		}
+    }
+
+    public void Damage(int damage)
+    {
+        if (!invincibility)
+        {
+            life -= damage;
+            print(life);
+            invincibility = true;
+            timeInvicibility = maxTimeInvicibility;
+        }
+
     }
 }
