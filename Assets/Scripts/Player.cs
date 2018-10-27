@@ -89,7 +89,6 @@ public class Player : MonoBehaviour
             invincibility = true;
             timeInvicibility = maxTimeInvicibility;
         }
-
     }
 
 	public void Noise(float amplitudeGain, float frequencyGain)
