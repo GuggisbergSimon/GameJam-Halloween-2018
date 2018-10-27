@@ -24,8 +24,6 @@ public class GameManager : MonoBehaviour
 	{
 		if (player.life <= 0)
 		{
-			//the destroy player is not working as intede, feel free to uncomment to see how
-			//Destroy(player);
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 			//play animation or whatever, wait for it to end and go to scene gameover
 		}
