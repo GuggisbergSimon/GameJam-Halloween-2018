@@ -5,12 +5,12 @@ using UnityEngine;
 public class Laser : Enemy
 {
 
-    private int time = 0;
+
 
     [SerializeField] private int timeSpawn;
     float currCountdownValue;
 
-    private float countdownValue = 10;
+
 
     private Animator animator;
     
@@ -42,6 +42,9 @@ public class Laser : Enemy
 
     void OnTriggerStay2D(Collider2D collider)
     {
-        collider.gameObject.GetComponent<Player>().life -= damage;
+        if (collider.gameObject.tag == "Player")
+        {
+            collider.gameObject.GetComponent<Player>().life -= damage;
+        }
     }
 }
