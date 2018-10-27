@@ -39,10 +39,7 @@ public class Player : MonoBehaviour
 	    {
 	        v = 0;
 	    }
-	    else
-	    {
-	        flame.transform.rotation = Quaternion.Euler(0, 0, 45*v);
-	    }
+	    
 
         if (v * rb2d.velocity.y < maxSpeed)
 		{
@@ -63,8 +60,8 @@ public class Player : MonoBehaviour
 		{
 			rb2d.velocity = new Vector2(0, 0);
 		}
-
-	    if (invincibility)
+	    flame.transform.rotation = Quaternion.Euler(0, 0,(rb2d.velocity.y)%45*5);
+        if (invincibility)
 	    {
             playerAnimator.SetBool("Invincibility", true);
 	        timeInvicibility -= 1;
