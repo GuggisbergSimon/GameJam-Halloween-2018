@@ -7,6 +7,7 @@ TagManager:
   - Background
   - Enemy
   - GameManager
+  - PlaneteCoeur
   layers:
   - Default
   - TransparentFX
@@ -56,9 +57,18 @@ TagManager:
   - name: BackGround3
     uniqueID: 293673811
     locked: 0
+  - name: FondSceneFinale
+    uniqueID: 296932163
+    locked: 0
   - name: 
     uniqueID: 3416293763
     locked: 0
   - name: Gameplay
     uniqueID: 4208192085
+    locked: 0
+  - name: PlaneteCoeur
+    uniqueID: 739924797
+    locked: 0
+  - name: LumiereExplosion
+    uniqueID: 3646203615
     locked: 0

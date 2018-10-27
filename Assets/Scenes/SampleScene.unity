@@ -1590,14 +1590,6 @@ Prefab:
       propertyPath: vcam
       value: 
       objectReference: {fileID: 833063743}
-    - target: {fileID: 4650881879241318, guid: 909631d0e7825f846a55e59efc6c3ff9, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280791256186756, guid: 909631d0e7825f846a55e59efc6c3ff9, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114733030394722536, guid: 909631d0e7825f846a55e59efc6c3ff9,
         type: 2}
       propertyPath: life
