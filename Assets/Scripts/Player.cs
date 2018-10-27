@@ -20,8 +20,8 @@ public class Player : MonoBehaviour
 	void FixedUpdate()
 	{
 		float v = Input.GetAxis("Vertical");
-	    if ((gameObject.transform.position.y > 5 && v > 0) ||
-	        (gameObject.transform.position.y < -5 && v < 0))
+	    if ((gameObject.transform.position.y > 4.3 && v > 0) ||
+	        (gameObject.transform.position.y < -4.3 && v < 0))
 	    {
 	        v = 0;
 	    }
@@ -39,8 +39,8 @@ public class Player : MonoBehaviour
 			rb2d.velocity = new Vector2(0, Mathf.Sign(rb2d.velocity.y) * maxSpeed);
 		}
 
-		if ((gameObject.transform.position.y > 5 && rb2d.velocity.y > 0) ||
-		    (gameObject.transform.position.y < -5 && rb2d.velocity.y < 0))
+		if ((gameObject.transform.position.y > 4.25 && rb2d.velocity.y > 0) ||
+		    (gameObject.transform.position.y < -4.25 && rb2d.velocity.y < 0))
 		{
 			rb2d.velocity = new Vector2(0, 0);
 		}
