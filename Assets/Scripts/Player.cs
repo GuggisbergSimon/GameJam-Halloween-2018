@@ -9,11 +9,9 @@ public class Player : MonoBehaviour
 {
 	private Rigidbody2D rb2d;
 	public int life = 100;
-	private int shakeTimer = 0;
 	private bool invincibility = false;
 	private float timeInvicibility;
-
-	[SerializeField] private float shakeForce = 0.5f;
+    
 	[SerializeField] private float moveForce = 365f;
 	[SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float maxTimeInvicibility = 100;
@@ -86,7 +84,7 @@ public class Player : MonoBehaviour
         if (!invincibility)
         {
             life -= damage;
-			Noise(damage,shakeForce);
+			Noise(damage/10,0.5f);
             print(life);
             invincibility = true;
             timeInvicibility = maxTimeInvicibility;

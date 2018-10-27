@@ -5,9 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuPause : MonoBehaviour {
-
-    bool paused = false;
-
+    
     [SerializeField]private GameObject pauseCanvas;
     
 
