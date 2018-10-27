@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,13 +9,22 @@ public class Player : MonoBehaviour
 {
 	private Rigidbody2D rb2d;
 	public int life = 100;
+	private bool isShaking = false;
+	private int shakeTimer = 0;
+	[SerializeField] private float shakeForce = 10f;
+	[SerializeField] private int shakeTime = 20;
 	[SerializeField] private float moveForce = 365f;
 	[SerializeField] private float maxSpeed = 10f;
+	[SerializeField] private CinemachineVirtualCamera vcam;
+	[SerializeField] private CinemachineBasicMultiChannelPerlin noise;
+
 
 	// Use this for initialization
 	void Start()
 	{
 		rb2d = GetComponent<Rigidbody2D>();
+		vcam = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
+		noise = vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 	}
 
 	void FixedUpdate()
@@ -44,6 +54,17 @@ public class Player : MonoBehaviour
 		{
 			rb2d.velocity = new Vector2(0, 0);
 		}
+
+		if (shakeTimer >= shakeTime)
+		{
+			shakeTimer = 0;
+			isShaking = false;
+			Noise(0.0f, 0.0f);
+		}
+		else if (isShaking)
+		{
+			shakeTimer++;
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
@@ -51,8 +72,15 @@ public class Player : MonoBehaviour
 		if (collision.gameObject.tag == "Enemy")
 		{
 		    life -= collision.gameObject.GetComponent<Enemy>().damage;
-            print(life);
+			Noise(shakeForce, 0.5f);
 			Destroy(collision.gameObject);
 		}
     }
+
+	public void Noise(float amplitudeGain, float frequencyGain)
+	{
+		isShaking = true;
+		noise.m_AmplitudeGain = amplitudeGain;
+		noise.m_FrequencyGain = frequencyGain;
+	}
 }
