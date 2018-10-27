@@ -27,7 +27,6 @@ public class Player : MonoBehaviour
 	}
 
 	// Update is called once per frame
-<<<<<<< Updated upstream
 	void Update()
 	{
 		if (Mathf.Abs(rb2d.velocity.y) > maxSpeed)
@@ -57,33 +56,3 @@ public class Player : MonoBehaviour
 		}
 	}
 }
-=======
-	void Update () {
-	    
-
-	    float v = Input.GetAxis("Vertical");
-	    
-        if (v * rb2d.velocity.y < maxSpeed)
-	        rb2d.AddForce(Vector2.up * v * moveForce);
-
-        
-	    if (Mathf.Abs(rb2d.velocity.y) > maxSpeed)
-	        rb2d.velocity = new Vector2(0, Mathf.Sign(rb2d.velocity.y) * maxSpeed);
-	    if ((Camera.main.WorldToScreenPoint(gameObject.transform.position).y > 600 && rb2d.velocity.y > 0) ||
-	        (Camera.main.WorldToScreenPoint(gameObject.transform.position).y < 20 && rb2d.velocity.y < 0))
-	    {
-	        rb2d.velocity = new Vector2(0, 0);
-        }
-        
-    }
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            life -= 10;
-            Destroy(collision.gameObject);
-            Debug.Log(life);
-        }
-    }
-}
->>>>>>> Stashed changes
