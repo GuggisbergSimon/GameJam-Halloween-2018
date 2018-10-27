@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Laser : MonoBehaviour
+public class Laser : Enemy
 {
 
     private int time = 0;
@@ -13,15 +13,13 @@ public class Laser : MonoBehaviour
     private float countdownValue = 10;
 
     private Animator animator;
-
-    private BoxCollider2D boxCollider;
+    
 
     public bool destroy = false;
     // Use this for initialization
     void Start ()
     {
         animator = GetComponent<Animator>();
-        boxCollider = GetComponent<BoxCollider2D>();
 	    StartCoroutine(StartCooldown());
     }
 	
@@ -38,8 +36,12 @@ public class Laser : MonoBehaviour
     {
         yield return new WaitForSeconds(timeSpawn);
         animator.SetBool("Fire", true);
-        boxCollider.enabled = true;
         
 
+    }
+
+    void OnTriggerStay2D(Collider2D collider)
+    {
+        collider.gameObject.GetComponent<Player>().life -= damage;
     }
 }
