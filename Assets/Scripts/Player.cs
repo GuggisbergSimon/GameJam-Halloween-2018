@@ -15,14 +15,18 @@ public class Player : MonoBehaviour
 	[SerializeField] private int shakeTime = 20;
 	[SerializeField] private float moveForce = 365f;
 	[SerializeField] private float maxSpeed = 10f;
+    [SerializeField] private float maxTimeInvicibility = 100;
+    private bool invincibility = false;
+    private float timeInvicibility;
 	[SerializeField] private CinemachineVirtualCamera vcam;
 	[SerializeField] private CinemachineBasicMultiChannelPerlin noise;
 
-
-	// Use this for initialization
-	void Start()
+    private Animator playerAnimator;
+    // Use this for initialization
+    void Start()
 	{
 		rb2d = GetComponent<Rigidbody2D>();
+	    playerAnimator = GetComponent<Animator>();
 		vcam = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
 		noise = vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 	}
@@ -55,26 +59,39 @@ public class Player : MonoBehaviour
 			rb2d.velocity = new Vector2(0, 0);
 		}
 
-		if (shakeTimer >= shakeTime)
-		{
-			shakeTimer = 0;
-			isShaking = false;
-			Noise(0.0f, 0.0f);
-		}
-		else if (isShaking)
-		{
-			shakeTimer++;
-		}
+	    if (invincibility)
+	    {
+            playerAnimator.SetBool("Invincibility", true);
+	        timeInvicibility -= 1;
+	        if (timeInvicibility <= 0)
+	        {
+	            invincibility = false;
+	            playerAnimator.SetBool("Invincibility", false);
+                //Debug.Log("Vincible");
+            }
+	    }
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.gameObject.tag == "Enemy")
 		{
-		    life -= collision.gameObject.GetComponent<Enemy>().damage;
-			Noise(shakeForce, 0.5f);
+		    Damage(collision.gameObject.GetComponent<Enemy>().damage);
+            
 			Destroy(collision.gameObject);
 		}
+    }
+
+    public void Damage(int damage)
+    {
+        if (!invincibility)
+        {
+            life -= damage;
+            print(life);
+            invincibility = true;
+            timeInvicibility = maxTimeInvicibility;
+        }
+
     }
 
 	public void Noise(float amplitudeGain, float frequencyGain)
