@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
 	    if (invincibility)
 	    {
             playerAnimator.SetBool("Invincibility", true);
-	        timeInvicibility -= 1;
+            timeInvicibility -= Time.deltaTime;
 	        if (timeInvicibility <= 0)
 	        {
 	            invincibility = false;
