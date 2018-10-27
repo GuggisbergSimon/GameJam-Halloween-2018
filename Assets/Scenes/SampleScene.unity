@@ -229,6 +229,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1503470361432640, guid: b6ba9abac93317d49a2f94079179dfd8,
         type: 2}
+    - target: {fileID: 114456884324879540, guid: 7981142897d45e943bdc0656eba31b14,
+        type: 2}
+      propertyPath: period
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
   m_IsPrefabAsset: 0
@@ -296,7 +301,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 18935524}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -462,11 +467,11 @@ RectTransform:
   m_Father: {fileID: 221469784}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 250}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -60}
   m_SizeDelta: {x: 202, y: 12}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &499099161
 MonoBehaviour:
   m_ObjectHideFlags: 0
