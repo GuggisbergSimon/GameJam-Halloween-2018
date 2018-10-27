@@ -25,13 +25,8 @@ public class TimeLeft : MonoBehaviour {
         TimeBeforeImpact = TimeMax - Time.timeSinceLevelLoad;
         if (TimeBeforeImpact > 0)
         {
-            do
-            {
-
                 impactText.text = TimeBeforeImpact.ToString("F1");
-                break;
-            }
-            while (TimeBeforeImpact > 0);
+
         }
         else
             impactText.text = 0.ToString("F1");

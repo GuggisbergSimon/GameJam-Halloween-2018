@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1412180623579096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalPosition: {x: 25, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -53,7 +53,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -20.5, y: 0}
+  m_Offset: {x: -42.17, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -80,5 +80,7 @@ MonoBehaviour:
   Enemy:
   - {fileID: 1177494543467252, guid: edf4ea71c12e96a4594f8352d047ed6a, type: 2}
   - {fileID: 1177494543467252, guid: 0b31ba3692458384f90a59573ffe3f59, type: 2}
-  - {fileID: 1177494543467252, guid: ca6130d9e3c17584080620d903848486, type: 2}
+  - {fileID: 1401287978091316, guid: fab6b2e1e08529941905a1c9bf9648a3, type: 2}
+  - {fileID: 1503470361432640, guid: b6ba9abac93317d49a2f94079179dfd8, type: 2}
+  nextActionTime: 5
   period: 5

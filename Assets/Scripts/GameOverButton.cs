@@ -16,4 +16,17 @@ public class GameOverButton : MonoBehaviour {
         //Load le Menu
         SceneManager.LoadScene(0);
     }
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Play") || Input.GetButtonDown("Retry"))
+        {
+            YesButton();
+        }
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            NoButton();
+        }
+    }
 }

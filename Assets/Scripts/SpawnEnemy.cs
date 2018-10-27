@@ -22,7 +22,7 @@ public class SpawnEnemy : MonoBehaviour
         if (Time.timeSinceLevelLoad > nextActionTime)
 	    {
 	        nextActionTime += period;
-	        Instantiate(Enemy[Random.Range(0, Enemy.Length)], new Vector3(10, Random.Range(-5, 5)), new Quaternion(0, 0, 0, 0));
+	        Instantiate(Enemy[Random.Range(0, Enemy.Length)], new Vector3(25, Random.Range(-4, 4), 1), new Quaternion(0, 0, 0, 0));
 	        if (period > 1)
 	        {
 	            period /= 1.5f;
