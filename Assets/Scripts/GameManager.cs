@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 	[SerializeField] private Player player;
-	[SerializeField] private float timeMax = 10;
+	[SerializeField] public float timeMax = 10;
 
 	// Use this for initialization
 	void Start () {
