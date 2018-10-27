@@ -7,11 +7,9 @@ public class Rocket : Enemy
     [SerializeField] private float speed = 10;
 	[SerializeField] private float distanceMin = -3;
 	private Transform targetTransform;
-    private Rigidbody2D myRigidbody2D;
 
     void Start()
     {
-        myRigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
