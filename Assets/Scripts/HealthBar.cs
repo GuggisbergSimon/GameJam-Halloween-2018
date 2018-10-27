@@ -22,10 +22,17 @@ public class HealthBar : MonoBehaviour {
 	void Update () {
         if(actualLife != player.GetComponent<Player>().life)
         {
+
             actualLife = player.GetComponent<Player>().life;
+            if (actualLife < 0)
+            {
+                actualLife = 0;
+            }
+
             float scaleSize = actualLife / maxLife;
             healthBar.transform.localScale = new Vector2(scaleSize, healthBar.transform.localScale.y);
         }
-		
+
+	    
 	}
 }

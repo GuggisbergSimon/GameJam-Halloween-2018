@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
 	[SerializeField] private CinemachineBasicMultiChannelPerlin noise;
     public bool animationEnd = false;
     private Animator playerAnimator;
+
+    [SerializeField]private GameObject flame;
     // Use this for initialization
     void Start()
 	{
@@ -26,6 +28,7 @@ public class Player : MonoBehaviour
 	    playerAnimator = GetComponent<Animator>();
 		vcam = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
 		noise = vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+	    
 	}
 
 	void FixedUpdate()
@@ -36,6 +39,8 @@ public class Player : MonoBehaviour
 	    {
 	        v = 0;
 	    }
+	    
+
         if (v * rb2d.velocity.y < maxSpeed)
 		{
 			rb2d.AddForce(Vector2.up * v * moveForce);
@@ -55,8 +60,8 @@ public class Player : MonoBehaviour
 		{
 			rb2d.velocity = new Vector2(0, 0);
 		}
-
-	    if (invincibility)
+	    flame.transform.rotation = Quaternion.Euler(0, 0,(rb2d.velocity.y)%45*5);
+        if (invincibility)
 	    {
             playerAnimator.SetBool("Invincibility", true);
 	        timeInvicibility -= Time.deltaTime;
