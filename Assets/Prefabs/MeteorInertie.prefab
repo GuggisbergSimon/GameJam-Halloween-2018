@@ -36,9 +36,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4191990635047178}
   - component: {fileID: 212450428493777870}
+  - component: {fileID: 58395355381552572}
   - component: {fileID: 50675375186276182}
   - component: {fileID: 114733030394722536}
-  - component: {fileID: 58395355381552572}
   m_Layer: 10
   m_Name: MeteorInertie
   m_TagString: Player
@@ -119,10 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce19731b8e52e724288f94c181d830ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 20
   life: 100
-  moveForce: 365
-  maxSpeed: 5
+  moveForce: 1200
+  maxSpeed: 7
 --- !u!212 &212450428493777870
 SpriteRenderer:
   m_ObjectHideFlags: 1

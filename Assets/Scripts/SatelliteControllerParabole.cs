@@ -22,6 +22,6 @@ public class SatelliteControllerParabole : MonoBehaviour
 	{
 		float A = amplitude;
 		float B = (2 * Mathf.PI)/period;
-		myRigidbody2D.velocity = Vector2.up* A * Mathf.Sin(B * Time.time) + Vector2.left * speed;
+		myRigidbody2D.velocity = Vector2.up* A * Mathf.Cos(B * Time.time) + Vector2.left * speed;
 	}
 }

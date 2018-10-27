@@ -17,8 +17,6 @@ public class Player2 : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
-
         float v = Input.GetAxis("Vertical");
         if ((Camera.main.WorldToScreenPoint(gameObject.transform.position).y > 600 && v > 0) ||
             (Camera.main.WorldToScreenPoint(gameObject.transform.position).y < 20 && v < 0))
