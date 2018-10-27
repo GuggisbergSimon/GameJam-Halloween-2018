@@ -180,6 +180,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114456884324879540, guid: 7981142897d45e943bdc0656eba31b14,
+        type: 2}
+      propertyPath: Enemy.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4705321168209936, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -217,6 +222,12 @@ Prefab:
       propertyPath: Enemy.Array.data[2]
       value: 
       objectReference: {fileID: 1401287978091316, guid: fab6b2e1e08529941905a1c9bf9648a3,
+        type: 2}
+    - target: {fileID: 114456884324879540, guid: 7981142897d45e943bdc0656eba31b14,
+        type: 2}
+      propertyPath: Enemy.Array.data[3]
+      value: 
+      objectReference: {fileID: 1503470361432640, guid: b6ba9abac93317d49a2f94079179dfd8,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
@@ -692,7 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1755779493}
-  timeMax: 15
+  timeMax: 60
 --- !u!4 &1618442742
 Transform:
   m_ObjectHideFlags: 0

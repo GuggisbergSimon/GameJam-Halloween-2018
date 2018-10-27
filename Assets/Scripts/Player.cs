@@ -50,9 +50,9 @@ public class Player : MonoBehaviour
 	{
 		if (collision.gameObject.tag == "Enemy")
 		{
-			life -= collision.gameObject.GetComponent<Enemy>().damage;
-			print(life);
+		    life -= collision.gameObject.GetComponent<Enemy>().damage;
+            print(life);
 			Destroy(collision.gameObject);
 		}
-	}
+    }
 }
