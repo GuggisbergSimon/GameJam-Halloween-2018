@@ -17,6 +17,7 @@ public class Rocket : MonoBehaviour
     void Update()
     {
         targetTransform = GameObject.FindWithTag("Player").transform;
+        Debug.Log(transform.position.x);
         if (transform.position.x > distanceMin)
         {
            
