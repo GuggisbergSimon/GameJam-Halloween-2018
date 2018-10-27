@@ -2421,7 +2421,7 @@ MonoBehaviour:
   life: 100
   moveForce: 500
   maxSpeed: 10
-  maxTimeInvicibility: 100
+  maxTimeInvicibility: 3
   vcam: {fileID: 833063743}
   noise: {fileID: 0}
   animationEnd: 0
