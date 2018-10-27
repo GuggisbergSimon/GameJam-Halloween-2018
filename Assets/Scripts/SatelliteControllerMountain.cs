@@ -8,6 +8,7 @@ public class SatelliteControllerMountain : MonoBehaviour
 {
 	[SerializeField] private float speed = 10;
 	[SerializeField] private int amplitude = 20;
+	public int damage = 10;
 
 	private int height = 0;
 	private Rigidbody2D myRigidbody2D;
