@@ -378,8 +378,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fab6b2e1e08529941905a1c9bf9648a3, type: 2}
   m_IsPrefabAsset: 0
-<<<<<<< Updated upstream
-=======
 --- !u!1001 &1106238696
 Prefab:
   m_ObjectHideFlags: 0
@@ -553,91 +551,4 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1331178660}
   m_Script: {fileID: 11500000, guid: ce19731b8e52e724288f94c181d830ad, type: 3}
-=======
---- !u!1001 &1911376079
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 114456884324879540, guid: 7981142897d45e943bdc0656eba31b14,
-        type: 2}
-      propertyPath: Enemy.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705321168209936, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705321168209936, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705321168209936, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705321168209936, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705321168209936, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705321168209936, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705321168209936, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705321168209936, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114456884324879540, guid: 7981142897d45e943bdc0656eba31b14,
-        type: 2}
-      propertyPath: Enemy.Array.data[0]
-      value: 
-      objectReference: {fileID: 1401287978091316, guid: fab6b2e1e08529941905a1c9bf9648a3,
-        type: 2}
-    - target: {fileID: 114456884324879540, guid: 7981142897d45e943bdc0656eba31b14,
-        type: 2}
-      propertyPath: Enemy.Array.data[1]
-      value: 
-      objectReference: {fileID: 1401287978091316, guid: fab6b2e1e08529941905a1c9bf9648a3,
-        type: 2}
-    - target: {fileID: 114456884324879540, guid: 7981142897d45e943bdc0656eba31b14,
-        type: 2}
-      propertyPath: Enemy.Array.data[2]
-      value: 
-      objectReference: {fileID: 1177494543467252, guid: edf4ea71c12e96a4594f8352d047ed6a,
-        type: 2}
-    - target: {fileID: 1412180623579096, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114456884324879540, guid: 7981142897d45e943bdc0656eba31b14,
-        type: 2}
-      propertyPath: Enemy.Array.data[3]
-      value: 
-      objectReference: {fileID: 1177494543467252, guid: 0b31ba3692458384f90a59573ffe3f59,
-        type: 2}
-    - target: {fileID: 114456884324879540, guid: 7981142897d45e943bdc0656eba31b14,
-        type: 2}
-      propertyPath: Enemy.Array.data[4]
-      value: 
-      objectReference: {fileID: 1177494543467252, guid: ca6130d9e3c17584080620d903848486,
-        type: 2}
-    - target: {fileID: 114456884324879540, guid: 7981142897d45e943bdc0656eba31b14,
-        type: 2}
-      propertyPath: period
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
-  m_IsPrefabAsset: 0
->>>>>>> Stashed changes
+
