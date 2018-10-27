@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class SatelliteController : MonoBehaviour
 {
 	[SerializeField] private float speed = 10;
+	public int damage = 10;
 	private Rigidbody2D myRigidbody2D;
 
 	void Start()
