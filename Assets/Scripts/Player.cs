@@ -17,8 +17,10 @@ public class Player : MonoBehaviour
     [SerializeField] private float maxTimeInvicibility = 100;
 	[SerializeField] private CinemachineVirtualCamera vcam;
 	[SerializeField] private CinemachineBasicMultiChannelPerlin noise;
-
+    public bool animationEnd = false;
     private Animator playerAnimator;
+
+    [SerializeField]private GameObject flame;
     // Use this for initialization
     void Start()
 	{
@@ -26,6 +28,7 @@ public class Player : MonoBehaviour
 	    playerAnimator = GetComponent<Animator>();
 		vcam = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
 		noise = vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+	    
 	}
 
 	void FixedUpdate()
@@ -36,6 +39,8 @@ public class Player : MonoBehaviour
 	    {
 	        v = 0;
 	    }
+	    
+
         if (v * rb2d.velocity.y < maxSpeed)
 		{
 			rb2d.AddForce(Vector2.up * v * moveForce);
@@ -55,8 +60,8 @@ public class Player : MonoBehaviour
 		{
 			rb2d.velocity = new Vector2(0, 0);
 		}
-
-	    if (invincibility)
+	    flame.transform.rotation = Quaternion.Euler(0, 0,(rb2d.velocity.y)%45*5);
+        if (invincibility)
 	    {
             playerAnimator.SetBool("Invincibility", true);
             timeInvicibility -= Time.deltaTime;
@@ -90,6 +95,13 @@ public class Player : MonoBehaviour
             timeInvicibility = maxTimeInvicibility;
         }
 
+        if (life <= 0)
+        {
+            Noise(0.0f, 0.0f);
+            rb2d.velocity = new Vector2(0, 0);
+            gameObject.GetComponent<Player>().enabled = false;
+            playerAnimator.SetBool("Mort", true);
+        }
     }
 
 	public void Noise(float amplitudeGain, float frequencyGain)
@@ -97,4 +109,9 @@ public class Player : MonoBehaviour
 		noise.m_AmplitudeGain = amplitudeGain;
 		noise.m_FrequencyGain = frequencyGain;
 	}
+
+    public void animationEnded()
+    {
+        animationEnd = true;
+    }
 }
