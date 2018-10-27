@@ -5,20 +5,59 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private Rigidbody2D rb2d;
+	private Rigidbody2D rb2d;
+	[SerializeField] private int life = 100;
+	[SerializeField] private float moveForce = 365f;
+	[SerializeField] private float maxSpeed = 10f;
 
-    public float playerSpeed = 20;
-
-    public int life = 100;
-    public float moveForce = 365f;
-    public float maxSpeed = 10f;
-    // Use this for initialization
-    void Start ()
+	// Use this for initialization
+	void Start()
 	{
-	    rb2d = GetComponent<Rigidbody2D>();
+		rb2d = GetComponent<Rigidbody2D>();
 	}
-	
+
+	void FixedUpdate()
+	{
+		float v = Input.GetAxis("Vertical");
+
+		if (v * rb2d.velocity.y < maxSpeed)
+		{
+			rb2d.AddForce(Vector2.up * v * moveForce);
+		}
+	}
+
 	// Update is called once per frame
+<<<<<<< Updated upstream
+	void Update()
+	{
+		if (Mathf.Abs(rb2d.velocity.y) > maxSpeed)
+		{
+			rb2d.velocity = new Vector2(0, Mathf.Sign(rb2d.velocity.y) * maxSpeed);
+		}
+
+		if ((Camera.main.WorldToScreenPoint(gameObject.transform.position).y > 600 && rb2d.velocity.y > 0) ||
+		    (Camera.main.WorldToScreenPoint(gameObject.transform.position).y < 20 && rb2d.velocity.y < 0))
+		{
+			rb2d.velocity = new Vector2(0, 0);
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.tag == "Enemy")
+		{
+			life -= 10;
+			if (life <= 0)
+			{
+				Destroy(this);
+				//TODO launch gameManager GAMEOVER
+			}
+
+			Destroy(collision.gameObject);
+		}
+	}
+}
+=======
 	void Update () {
 	    
 
@@ -35,9 +74,7 @@ public class Player : MonoBehaviour
 	    {
 	        rb2d.velocity = new Vector2(0, 0);
         }
-        //Debug.Log(rb2d.velocity);
-	    Debug.Log(Camera.main.WorldToScreenPoint(gameObject.transform.position).y);
-
+        
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -45,6 +82,8 @@ public class Player : MonoBehaviour
         {
             life -= 10;
             Destroy(collision.gameObject);
+            Debug.Log(life);
         }
     }
 }
+>>>>>>> Stashed changes
