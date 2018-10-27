@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
 	void CheckVictory()
 	{
-		if (Time.timeSinceLevelLoad>timeMax)
+		if (Time.timeSinceLevelLoad>timeMax && player.GetComponent<Player>().life > 0)
 		{
 			SceneManager.LoadScene("WinScene");
 		}

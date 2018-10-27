@@ -488,7 +488,7 @@ Prefab:
     - target: {fileID: 114733030394722536, guid: 909631d0e7825f846a55e59efc6c3ff9,
         type: 2}
       propertyPath: life
-      value: 20
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 909631d0e7825f846a55e59efc6c3ff9, type: 2}
@@ -1614,16 +1614,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 396421446}
   m_Script: {fileID: 11500000, guid: ce19731b8e52e724288f94c181d830ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 100
-  moveForce: 500
-  maxSpeed: 10
-  maxTimeInvicibility: 3
-  vcam: {fileID: 833063743}
-  noise: {fileID: 0}
-  animationEnd: 0
-  flame: {fileID: 592620922}
 --- !u!1 &1790868297
 GameObject:
   m_ObjectHideFlags: 0
