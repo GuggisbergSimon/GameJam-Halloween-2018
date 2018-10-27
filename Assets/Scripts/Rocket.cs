@@ -32,6 +32,5 @@ public class Rocket : MonoBehaviour
             //move if distance from target is greater than 1
             transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
         } 
-
     }
 }
