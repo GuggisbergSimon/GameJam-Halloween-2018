@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float maxTimeInvicibility = 100;
 	[SerializeField] private CinemachineVirtualCamera vcam;
 	[SerializeField] private CinemachineBasicMultiChannelPerlin noise;
-
+    public bool animationEnd = false;
     private Animator playerAnimator;
     // Use this for initialization
     void Start()
@@ -89,6 +89,14 @@ public class Player : MonoBehaviour
             invincibility = true;
             timeInvicibility = maxTimeInvicibility;
         }
+
+        if (life <= 0)
+        {
+            Noise(0.0f, 0.0f);
+            rb2d.velocity = new Vector2(0, 0);
+            gameObject.GetComponent<Player>().enabled = false;
+            playerAnimator.SetBool("Mort", true);
+        }
     }
 
 	public void Noise(float amplitudeGain, float frequencyGain)
@@ -96,4 +104,9 @@ public class Player : MonoBehaviour
 		noise.m_AmplitudeGain = amplitudeGain;
 		noise.m_FrequencyGain = frequencyGain;
 	}
+
+    public void animationEnded()
+    {
+        animationEnd = true;
+    }
 }

@@ -7,10 +7,10 @@ public class GameManager : MonoBehaviour
 {
 	[SerializeField] private Player player;
 	[SerializeField] public float timeMax = 10;
-
-	// Use this for initialization
-	void Start () {
-		
+    float timer = 0.0f;
+    // Use this for initialization
+    void Start ()
+	{
 	}
 	
 	// Update is called once per frame
@@ -18,13 +18,17 @@ public class GameManager : MonoBehaviour
 	{
 		CheckDefeat();
 		CheckVictory();
-	}
+	    
+    }
 
 	void CheckDefeat()
 	{
 		if (player.life <= 0)
 		{
-			SceneManager.LoadScene("GameOver");
+		    if (player.animationEnd)
+		    {
+		        SceneManager.LoadScene("GameOver");
+		    }
 		}
 	}
 
