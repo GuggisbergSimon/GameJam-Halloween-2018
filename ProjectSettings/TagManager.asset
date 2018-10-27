@@ -57,6 +57,9 @@ TagManager:
   - name: BackGround3
     uniqueID: 293673811
     locked: 0
+  - name: FondSceneFinale
+    uniqueID: 296932163
+    locked: 0
   - name: 
     uniqueID: 3416293763
     locked: 0
