@@ -14,6 +14,17 @@ public class MenuButtons : MonoBehaviour {
     public void QuitGame ()
     {
         Application.Quit();
+        Debug.Log("quit");
     }
 
+    void Update()
+    {
+        if (Input.GetButtonDown("Play"))
+            PlayGame();
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            QuitGame();
+        }
+    }
 }
