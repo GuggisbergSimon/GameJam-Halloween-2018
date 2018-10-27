@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 		{
 			//the destroy player is not working as intede, feel free to uncomment to see how
 			//Destroy(player);
-			//SceneManager.LoadScene(SceneManager.GetSceneByName("GameOver"));
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 			//play animation or whatever, wait for it to end and go to scene gameover
 		}
 	}
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 	{
 		if (Time.timeSinceLevelLoad>timeMax)
 		{
-			//SceneManager.LoadScene(SceneManager.GetSceneByName("Victory"));
+			//SceneManager.LoadScene(SceneManager.GetSceneByName("WinScene"));
 			//play animation for end, wait for it to end and go to scene victory
 		}
 	}
