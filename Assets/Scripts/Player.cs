@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 	private Rigidbody2D rb2d;
-	[SerializeField] private int life = 100;
+	public int life = 100;
 	[SerializeField] private float moveForce = 365f;
 	[SerializeField] private float maxSpeed = 10f;
 
@@ -46,12 +46,6 @@ public class Player : MonoBehaviour
 		if (collision.gameObject.tag == "Enemy")
 		{
 			life -= 10;
-			if (life <= 0)
-			{
-				Destroy(this);
-				//TODO launch gameManager GAMEOVER
-			}
-
 			Destroy(collision.gameObject);
 		}
 	}
