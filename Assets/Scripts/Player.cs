@@ -11,13 +11,13 @@ public class Player : MonoBehaviour
 	public int life = 100;
 	private bool isShaking = false;
 	private int shakeTimer = 0;
+	private bool invincibility = false;
+	private float timeInvicibility;
+
 	[SerializeField] private float shakeForce = 10f;
-	[SerializeField] private int shakeTime = 20;
 	[SerializeField] private float moveForce = 365f;
 	[SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float maxTimeInvicibility = 100;
-    private bool invincibility = false;
-    private float timeInvicibility;
 	[SerializeField] private CinemachineVirtualCamera vcam;
 	[SerializeField] private CinemachineBasicMultiChannelPerlin noise;
 
@@ -66,8 +66,8 @@ public class Player : MonoBehaviour
 	        if (timeInvicibility <= 0)
 	        {
 	            invincibility = false;
+				Noise(0.0f,0.0f);
 	            playerAnimator.SetBool("Invincibility", false);
-                //Debug.Log("Vincible");
             }
 	    }
 	}
@@ -87,6 +87,7 @@ public class Player : MonoBehaviour
         if (!invincibility)
         {
             life -= damage;
+			Noise(shakeForce,0.5f);
             print(life);
             invincibility = true;
             timeInvicibility = maxTimeInvicibility;
