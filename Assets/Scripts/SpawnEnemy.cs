@@ -19,7 +19,7 @@ public class SpawnEnemy : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-        if (Time.time > nextActionTime)
+        if (Time.timeSinceLevelLoad > nextActionTime)
 	    {
 	        nextActionTime += period;
 	        Instantiate(Enemy[Random.Range(0, Enemy.Length)], new Vector3(10, Random.Range(-5, 5)), new Quaternion(0, 0, 0, 0));

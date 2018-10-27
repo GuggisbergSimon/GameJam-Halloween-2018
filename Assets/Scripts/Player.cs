@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -49,8 +50,9 @@ public class Player : MonoBehaviour
 			if (life <= 0)
 			{
 				Destroy(this);
-				//TODO launch gameManager GAMEOVER
-			}
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                //TODO launch gameManager GAMEOVER
+            }
 
 			Destroy(collision.gameObject);
 		}
