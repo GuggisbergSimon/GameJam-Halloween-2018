@@ -63,3 +63,9 @@ TagManager:
   - name: Gameplay
     uniqueID: 4208192085
     locked: 0
+  - name: PlaneteCoeur
+    uniqueID: 739924797
+    locked: 0
+  - name: LumiereExplosion
+    uniqueID: 3646203615
+    locked: 0
