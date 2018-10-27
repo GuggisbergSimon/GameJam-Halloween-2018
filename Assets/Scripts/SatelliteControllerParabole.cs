@@ -10,6 +10,7 @@ public class SatelliteControllerParabole : MonoBehaviour
 	[SerializeField] private float speed = 10;
 	[SerializeField] private float amplitude = 5;
 	[SerializeField] private float period = 5;
+	public int damage = 10;
 	private Rigidbody2D myRigidbody2D;
 
 	void Start()
