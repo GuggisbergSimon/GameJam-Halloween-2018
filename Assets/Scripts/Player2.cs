@@ -26,19 +26,21 @@ public class Player2 : MonoBehaviour {
             v = 0;
         }
 
-        //Debug.Log(Camera.main.WorldToScreenPoint(gameObject.transform.position).y);
         Vector2 myVelocity = Vector2.up;
         myVelocity *= v * playerSpeed;
         
         rb2d.velocity = myVelocity;
-
-
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
             life -= 10;
+	        if (life <= 0)
+	        {
+				Destroy(this);
+				//launch gameManager GAMEOVER
+	        }
             Destroy(collision.gameObject);
         }
     }

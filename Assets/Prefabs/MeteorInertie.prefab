@@ -36,9 +36,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4191990635047178}
   - component: {fileID: 212450428493777870}
-  - component: {fileID: 61380042395886552}
   - component: {fileID: 50675375186276182}
   - component: {fileID: 114733030394722536}
+  - component: {fileID: 58395355381552572}
   m_Layer: 10
   m_Name: MeteorInertie
   m_TagString: Player
@@ -53,8 +53,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1832368583629202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.93, y: -0.07406142, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: -7, y: 0, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4650881879241318}
   m_Father: {fileID: 0}
@@ -92,9 +92,9 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &61380042395886552
-BoxCollider2D:
+  m_Constraints: 5
+--- !u!58 &58395355381552572
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -105,19 +105,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -0.31, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 2.25
 --- !u!114 &114733030394722536
 MonoBehaviour:
   m_ObjectHideFlags: 1

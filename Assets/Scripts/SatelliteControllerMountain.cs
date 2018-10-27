@@ -39,10 +39,4 @@ public class SatelliteControllerMountain : MonoBehaviour
 
 		myRigidbody2D.velocity = myVelocity + Vector2.left * speed;
 	}
-
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		print("test");
-		Destroy(other.gameObject);
-	}
 }
