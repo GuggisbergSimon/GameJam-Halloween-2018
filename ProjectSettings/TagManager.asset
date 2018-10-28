@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Background
+  - Enemy
+  - GameManager
+  - PlaneteCoeur
   layers:
   - Default
   - TransparentFX
@@ -13,10 +17,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Satellite
+  - Player
+  - Rocket
   - 
   - 
   - 
@@ -40,4 +44,31 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Void
+    uniqueID: 2205498247
+    locked: 0
+  - name: BackGround1
+    uniqueID: 2765601219
+    locked: 0
+  - name: BackGround2
+    uniqueID: 2135524175
+    locked: 0
+  - name: BackGround3
+    uniqueID: 293673811
+    locked: 0
+  - name: FondSceneFinale
+    uniqueID: 296932163
+    locked: 0
+  - name: 
+    uniqueID: 3416293763
+    locked: 0
+  - name: Gameplay
+    uniqueID: 4208192085
+    locked: 0
+  - name: PlaneteCoeur
+    uniqueID: 739924797
+    locked: 0
+  - name: LumiereExplosion
+    uniqueID: 3646203615
     locked: 0
