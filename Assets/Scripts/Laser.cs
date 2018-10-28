@@ -8,8 +8,9 @@ public class Laser : Enemy
 
 
     [SerializeField] private int timeSpawn;
+    [SerializeField] private AudioSource shootWarningSound;
     float currCountdownValue;
-
+    [SerializeField]private AudioSource shootSound;
 
 
     private Animator animator;
@@ -35,6 +36,8 @@ public class Laser : Enemy
     public IEnumerator StartCooldown()
     {
         yield return new WaitForSeconds(timeSpawn);
+        shootWarningSound.Pause();
+        shootSound.Play();
         animator.SetBool("Fire", true);
         
 
