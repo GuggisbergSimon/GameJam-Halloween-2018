@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
 	{
 		if (Time.timeSinceLevelLoad>timeMax && player.GetComponent<Player>().life > 0)
 		{
+ 
             player.playerAnimator.SetBool("Fin", true);
 			player.invincibility = true;
 
