@@ -18,8 +18,8 @@ public class Player : MonoBehaviour
 	private CinemachineVirtualCamera vcam;
 	private CinemachineBasicMultiChannelPerlin noise;
     public bool animationEnd = false;
-    private Animator playerAnimator;
-
+    public Animator playerAnimator;
+    public bool end;
     [SerializeField]private GameObject flame;
     // Use this for initialization
     void Start()
@@ -71,7 +71,8 @@ public class Player : MonoBehaviour
 	            playerAnimator.SetBool("Invincibility", false);
             }
 	    }
-	}
+        
+    }
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
@@ -115,4 +116,9 @@ public class Player : MonoBehaviour
 		noise.m_AmplitudeGain = amplitudeGain;
 		noise.m_FrequencyGain = frequencyGain;
 	}
+
+    public void animationWin()
+    {
+        playerAnimator.SetBool("Fin", true);
+    }
 }

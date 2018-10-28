@@ -37,8 +37,12 @@ public class GameManager : MonoBehaviour
 	{
 		if (Time.timeSinceLevelLoad>timeMax && player.GetComponent<Player>().life > 0)
 		{
-		    Time.timeScale = 1f;
-            SceneManager.LoadScene("WinScene");
+            player.playerAnimator.SetBool("Fin", true);
+		    if (player.end)
+		    {
+		        Time.timeScale = 1f;
+		        SceneManager.LoadScene("WinScene");
+		    }
 		}
 	}
 }
