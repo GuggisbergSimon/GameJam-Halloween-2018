@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
 		if (Time.timeSinceLevelLoad>timeMax && player.GetComponent<Player>().life > 0)
 		{
             player.playerAnimator.SetBool("Fin", true);
+			player.invincibility = true;
 
 		    player.audioMeteor.volume = 0.7f;
             if (player.end)

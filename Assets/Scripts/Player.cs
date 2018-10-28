@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 {
 	private Rigidbody2D rb2d;
 	public int life = 100;
-	private bool invincibility = false;
+	public bool invincibility = false;
 	private float timeInvicibility;
     
 	[SerializeField] private float moveForce = 365f;
