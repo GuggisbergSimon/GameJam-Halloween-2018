@@ -212,16 +212,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61647217753314852, guid: 7981142897d45e943bdc0656eba31b14,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: -50
-      objectReference: {fileID: 0}
-    - target: {fileID: 61647217753314852, guid: 7981142897d45e943bdc0656eba31b14,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 60
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7981142897d45e943bdc0656eba31b14, type: 2}
   m_IsPrefabAsset: 0
@@ -599,9 +589,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5382a66ed6077804c8975ff015fd0a2e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 328fd7e4e8e93544ebd319061410ce82, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1146,6 +1136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseCanvas: {fileID: 1109512404}
+  EventSystem: {fileID: 418374277}
 --- !u!1001 &1295876542
 Prefab:
   m_ObjectHideFlags: 0
@@ -1184,10 +1175,6 @@ Prefab:
     - target: {fileID: 4191990635047178, guid: 909631d0e7825f846a55e59efc6c3ff9, type: 2}
       propertyPath: m_RootOrder
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832368583629202, guid: 909631d0e7825f846a55e59efc6c3ff9, type: 2}
-      propertyPath: m_Name
-      value: MeteorInertie
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 909631d0e7825f846a55e59efc6c3ff9, type: 2}
