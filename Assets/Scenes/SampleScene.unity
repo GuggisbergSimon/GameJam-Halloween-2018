@@ -1211,12 +1211,12 @@ Prefab:
     - target: {fileID: 212172216933917566, guid: 909631d0e7825f846a55e59efc6c3ff9,
         type: 2}
       propertyPath: m_SortingLayerID
-      value: -86775211
+      value: 739924797
       objectReference: {fileID: 0}
     - target: {fileID: 212172216933917566, guid: 909631d0e7825f846a55e59efc6c3ff9,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1025456084730188, guid: 909631d0e7825f846a55e59efc6c3ff9, type: 2}
       propertyPath: m_IsActive
@@ -1244,6 +1244,10 @@ Prefab:
         type: 2}
       propertyPath: life
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701898561636208, guid: 909631d0e7825f846a55e59efc6c3ff9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95414446621288964, guid: 909631d0e7825f846a55e59efc6c3ff9, type: 2}
@@ -1565,7 +1569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 680921639}
-  timeMax: 60
+  timeMax: 5
 --- !u!4 &1618442742
 Transform:
   m_ObjectHideFlags: 0
