@@ -1507,7 +1507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 680921639}
-  timeMax: 50
+  timeMax: 60
 --- !u!4 &1618442742
 Transform:
   m_ObjectHideFlags: 0
