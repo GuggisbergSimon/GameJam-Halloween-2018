@@ -19,8 +19,10 @@ public class Player : MonoBehaviour
 	private CinemachineBasicMultiChannelPerlin noise;
     public bool animationEnd = false;
     public Animator playerAnimator;
-    public bool end;
+    public bool end = false;
     [SerializeField]private GameObject flame;
+
+    public AudioSource audioMeteor;
     // Use this for initialization
     void Start()
 	{

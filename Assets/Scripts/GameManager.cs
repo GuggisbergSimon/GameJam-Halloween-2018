@@ -38,7 +38,9 @@ public class GameManager : MonoBehaviour
 		if (Time.timeSinceLevelLoad>timeMax && player.GetComponent<Player>().life > 0)
 		{
             player.playerAnimator.SetBool("Fin", true);
-		    if (player.end)
+
+		    player.audioMeteor.volume = 0.7f;
+            if (player.end)
 		    {
 		        Time.timeScale = 1f;
 		        SceneManager.LoadScene("WinScene");
