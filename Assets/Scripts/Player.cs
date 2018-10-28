@@ -106,6 +106,7 @@ public class Player : MonoBehaviour
             rb2d.velocity = new Vector2(0, 0);
             gameObject.GetComponent<Player>().enabled = false;
             playerAnimator.SetBool("Mort", true);
+            Debug.Log("Maintenant");
 		}
     }
 
@@ -114,9 +115,4 @@ public class Player : MonoBehaviour
 		noise.m_AmplitudeGain = amplitudeGain;
 		noise.m_FrequencyGain = frequencyGain;
 	}
-
-    public void animationEnded()
-    {
-        animationEnd = true;
-    }
 }

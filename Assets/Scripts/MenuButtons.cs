@@ -17,6 +17,7 @@ public class MenuButtons : MonoBehaviour
 	{
 		audio.Play();
         //Load le prochain niveau
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

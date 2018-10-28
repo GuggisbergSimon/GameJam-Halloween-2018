@@ -14,6 +14,7 @@ public class IsEndScene : MonoBehaviour {
 	void Update () {
 		if (Time.timeSinceLevelLoad > 34.5f)
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene("MainMenu");
         } 
 	}
