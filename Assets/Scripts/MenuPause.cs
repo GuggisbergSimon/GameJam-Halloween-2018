@@ -7,17 +7,25 @@ using UnityEngine.SceneManagement;
 public class MenuPause : MonoBehaviour {
     
     [SerializeField]private GameObject pauseCanvas;
+    [SerializeField] private GameObject EventSystem;
+    private AudioSource audio;
     
 
     public void ActivePause ()
     {
+        
         Time.timeScale = 0f;
+        audio = EventSystem.GetComponent<AudioSource>();
+        audio.Pause();
         pauseCanvas.SetActive(true);
     }
 
     public void DesactivePause()
     {
+        
         pauseCanvas.SetActive(false);
+        audio = EventSystem.GetComponent<AudioSource>();
+        audio.Play();
         Time.timeScale = 1f;
     }
 
