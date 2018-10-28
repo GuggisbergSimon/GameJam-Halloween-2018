@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
     [SerializeField] private float maxTimeInvicibility = 100;
 	[SerializeField] private CinemachineVirtualCamera vcam;
 	[SerializeField] private CinemachineBasicMultiChannelPerlin noise;
-	[SerializeField] private AudioClip hitSound;
 	public bool animationEnd = false;
     private Animator playerAnimator;
 
@@ -95,8 +94,8 @@ public class Player : MonoBehaviour
 
 			//play a sound when hit
 	        AudioSource audio = GetComponent<AudioSource>();
-			audio.clip = hitSound;
 	        audio.Play();
+			
         }
 
         if (life <= 0)
