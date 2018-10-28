@@ -101,7 +101,7 @@ public class Player : MonoBehaviour
 
         if (life <= 0)
         {
-            Noise(30, 0.5f);
+            Noise(5, 0.5f);
             Time.timeScale = 0.5f;
             rb2d.velocity = new Vector2(0, 0);
             gameObject.GetComponent<Player>().enabled = false;
