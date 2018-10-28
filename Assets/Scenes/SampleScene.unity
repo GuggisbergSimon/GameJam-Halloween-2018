@@ -2421,9 +2421,7 @@ MonoBehaviour:
   life: 100
   moveForce: 500
   maxSpeed: 10
-  maxTimeInvicibility: 100
-  vcam: {fileID: 833063743}
-  noise: {fileID: 0}
+  maxTimeInvicibility: 1
   animationEnd: 0
   flame: {fileID: 592620922}
 --- !u!1 &1790868297

@@ -15,8 +15,8 @@ public class Player : MonoBehaviour
 	[SerializeField] private float moveForce = 365f;
 	[SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float maxTimeInvicibility = 100;
-	[SerializeField] private CinemachineVirtualCamera vcam;
-	[SerializeField] private CinemachineBasicMultiChannelPerlin noise;
+	private CinemachineVirtualCamera vcam;
+	private CinemachineBasicMultiChannelPerlin noise;
     public bool animationEnd = false;
     private Animator playerAnimator;
 
@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
         if (!invincibility)
         {
             life -= damage;
-			Noise(damage/10,0.5f);
+			Noise(damage/2,0.5f);
             print(life);
             invincibility = true;
             timeInvicibility = maxTimeInvicibility;
@@ -97,7 +97,7 @@ public class Player : MonoBehaviour
 
         if (life <= 0)
         {
-            Noise(0.0f, 0.0f);
+            Noise(30, 0.5f);
             rb2d.velocity = new Vector2(0, 0);
             gameObject.GetComponent<Player>().enabled = false;
             playerAnimator.SetBool("Mort", true);
