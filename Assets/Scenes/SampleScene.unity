@@ -1499,7 +1499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 680921639}
-  timeMax: 60
+  timeMax: 25
 --- !u!4 &1618442742
 Transform:
   m_ObjectHideFlags: 0
