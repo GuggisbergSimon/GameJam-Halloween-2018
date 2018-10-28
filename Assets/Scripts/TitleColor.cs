@@ -20,6 +20,5 @@ public class TitleColor : MonoBehaviour
 		hue += speed;
 		hue %= 1;
 		m_SpriteRenderer.color = Color.HSVToRGB(hue,1,1);
-		print(m_SpriteRenderer.color);
 	}
 }

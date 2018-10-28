@@ -90,7 +90,6 @@ public class Player : MonoBehaviour
         {
             life -= damage;
 			Noise(damage/10,0.5f);
-            print(life);
             invincibility = true;
             timeInvicibility = maxTimeInvicibility;
 

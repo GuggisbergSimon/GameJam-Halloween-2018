@@ -31,8 +31,6 @@ public class SpawnEnemy : MonoBehaviour
 	        {
 	            period -= 0.01f;
 	        }
-
-            Debug.Log("Time " + period);
 	    }
 	   
     }
