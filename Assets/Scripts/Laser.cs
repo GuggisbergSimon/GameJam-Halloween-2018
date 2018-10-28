@@ -43,11 +43,12 @@ public class Laser : Enemy
 
     }
 
-    void OnTriggerStay2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Player" && collider.gameObject.GetComponent<Player>().life>0)
         {
             collider.gameObject.GetComponent<Player>().Damage(damage);
+            Debug.Log("yousk2");
         }
     }
 }
