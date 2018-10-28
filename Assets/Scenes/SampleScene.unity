@@ -1146,6 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseCanvas: {fileID: 1109512404}
+  EventSystem: {fileID: 418374277}
 --- !u!1001 &1295876542
 Prefab:
   m_ObjectHideFlags: 0
@@ -1184,10 +1185,6 @@ Prefab:
     - target: {fileID: 4191990635047178, guid: 909631d0e7825f846a55e59efc6c3ff9, type: 2}
       propertyPath: m_RootOrder
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832368583629202, guid: 909631d0e7825f846a55e59efc6c3ff9, type: 2}
-      propertyPath: m_Name
-      value: MeteorInertie
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 909631d0e7825f846a55e59efc6c3ff9, type: 2}
