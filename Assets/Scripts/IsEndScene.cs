@@ -12,9 +12,9 @@ public class IsEndScene : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.timeSinceLevelLoad > 24.5f)
+		if (Time.timeSinceLevelLoad > 34.5f)
         {
             SceneManager.LoadScene("MainMenu");
-        }
+        } 
 	}
 }
