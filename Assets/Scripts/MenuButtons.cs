@@ -8,6 +8,7 @@ public class MenuButtons : MonoBehaviour {
     public void PlayGame ()
     {
         //Load le prochain niveau
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

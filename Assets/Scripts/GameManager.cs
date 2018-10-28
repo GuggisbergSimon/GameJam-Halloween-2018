@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 		{
 		    if (player.animationEnd)
 		    {
+		        Time.timeScale = 1f;
 		        SceneManager.LoadScene("GameOver");
 		    }
 		}
@@ -36,7 +37,8 @@ public class GameManager : MonoBehaviour
 	{
 		if (Time.timeSinceLevelLoad>timeMax && player.GetComponent<Player>().life > 0)
 		{
-			SceneManager.LoadScene("WinScene");
+		    Time.timeScale = 1f;
+            SceneManager.LoadScene("WinScene");
 		}
 	}
 }
