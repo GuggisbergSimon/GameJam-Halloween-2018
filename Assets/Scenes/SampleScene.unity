@@ -1050,6 +1050,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &886809531 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 82314541306818112, guid: 909631d0e7825f846a55e59efc6c3ff9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1295876542}
 --- !u!1 &1109512404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1229,21 @@ Prefab:
     - target: {fileID: 4701898561636208, guid: 909631d0e7825f846a55e59efc6c3ff9, type: 2}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82314541306818112, guid: 909631d0e7825f846a55e59efc6c3ff9,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114733030394722536, guid: 909631d0e7825f846a55e59efc6c3ff9,
+        type: 2}
+      propertyPath: audioMeteor
+      value: 
+      objectReference: {fileID: 886809531}
+    - target: {fileID: 114733030394722536, guid: 909631d0e7825f846a55e59efc6c3ff9,
+        type: 2}
+      propertyPath: life
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95414446621288964, guid: 909631d0e7825f846a55e59efc6c3ff9, type: 2}
@@ -1545,7 +1565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 680921639}
-  timeMax: 5
+  timeMax: 60
 --- !u!4 &1618442742
 Transform:
   m_ObjectHideFlags: 0
