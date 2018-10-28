@@ -334,6 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseCanvas: {fileID: 1109512404}
+  EventSystem: {fileID: 418374277}
 --- !u!1001 &243049340
 Prefab:
   m_ObjectHideFlags: 0
@@ -647,7 +648,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5382a66ed6077804c8975ff015fd0a2e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1186,6 +1187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseCanvas: {fileID: 1109512404}
+  EventSystem: {fileID: 418374277}
 --- !u!1 &1412985991
 GameObject:
   m_ObjectHideFlags: 0
