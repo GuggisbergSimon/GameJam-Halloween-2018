@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
 	[SerializeField] private Player player;
 	[SerializeField] public float timeMax = 10;
-    float timer = 0.0f;
+	
     // Use this for initialization
     void Start ()
 	{
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
 	void CheckVictory()
 	{
-		if (Time.timeSinceLevelLoad>timeMax)
+		if (Time.timeSinceLevelLoad>timeMax && player.GetComponent<Player>().life > 0)
 		{
 			SceneManager.LoadScene("WinScene");
 		}

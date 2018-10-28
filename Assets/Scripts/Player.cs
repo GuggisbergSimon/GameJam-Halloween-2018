@@ -28,7 +28,6 @@ public class Player : MonoBehaviour
 	    playerAnimator = GetComponent<Animator>();
 		vcam = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
 		noise = vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-	    
 	}
 
 	void FixedUpdate()
@@ -64,7 +63,7 @@ public class Player : MonoBehaviour
         if (invincibility)
 	    {
             playerAnimator.SetBool("Invincibility", true);
-	        timeInvicibility -= Time.deltaTime;
+            timeInvicibility -= Time.deltaTime;
 	        if (timeInvicibility <= 0)
 	        {
 	            invincibility = false;
@@ -93,6 +92,11 @@ public class Player : MonoBehaviour
             print(life);
             invincibility = true;
             timeInvicibility = maxTimeInvicibility;
+
+			//play a sound when hit
+	        AudioSource audio = GetComponent<AudioSource>();
+	        audio.Play();
+			
         }
 
         if (life <= 0)
@@ -102,7 +106,7 @@ public class Player : MonoBehaviour
             rb2d.velocity = new Vector2(0, 0);
             gameObject.GetComponent<Player>().enabled = false;
             playerAnimator.SetBool("Mort", true);
-        }
+		}
     }
 
 	public void Noise(float amplitudeGain, float frequencyGain)

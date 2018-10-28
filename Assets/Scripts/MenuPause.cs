@@ -31,11 +31,7 @@ public class MenuPause : MonoBehaviour {
     {
         if (Input.GetButtonDown("Pause"))
             togglePause();
-
-        if (Input.GetButtonDown("Play"))
-            DesactivePause();
-
-        if (Input.GetButtonDown("Retry"))
+        if (Input.GetButtonDown("Retry") || Input.GetButtonDown("Cancel"))
             Retry();
     }
     
