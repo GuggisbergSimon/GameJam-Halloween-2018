@@ -8,12 +8,14 @@ public class GameOverButton : MonoBehaviour {
     public void YesButton()
     {
         //Load l'ancien niveau
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("SampleScene");
     }
 
     public void NoButton()
     {
         //Load le Menu
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
 
