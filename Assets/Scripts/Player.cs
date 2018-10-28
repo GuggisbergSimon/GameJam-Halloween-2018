@@ -18,9 +18,11 @@ public class Player : MonoBehaviour
 	private CinemachineVirtualCamera vcam;
 	private CinemachineBasicMultiChannelPerlin noise;
     public bool animationEnd = false;
-    private Animator playerAnimator;
-
+    public Animator playerAnimator;
+    public bool end = false;
     [SerializeField]private GameObject flame;
+
+    public AudioSource audioMeteor;
     // Use this for initialization
     void Start()
 	{
@@ -71,7 +73,8 @@ public class Player : MonoBehaviour
 	            playerAnimator.SetBool("Invincibility", false);
             }
 	    }
-	}
+        
+    }
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
@@ -105,7 +108,6 @@ public class Player : MonoBehaviour
             rb2d.velocity = new Vector2(0, 0);
             gameObject.GetComponent<Player>().enabled = false;
             playerAnimator.SetBool("Mort", true);
-            Debug.Log("Maintenant");
 		}
     }
 
@@ -114,4 +116,9 @@ public class Player : MonoBehaviour
 		noise.m_AmplitudeGain = amplitudeGain;
 		noise.m_FrequencyGain = frequencyGain;
 	}
+
+    public void animationWin()
+    {
+        playerAnimator.SetBool("Fin", true);
+    }
 }

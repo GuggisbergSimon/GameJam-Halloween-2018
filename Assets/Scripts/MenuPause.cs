@@ -8,15 +8,15 @@ public class MenuPause : MonoBehaviour {
     
     [SerializeField]private GameObject pauseCanvas;
     [SerializeField] private GameObject EventSystem;
-    private AudioSource audio;
+    private AudioSource audioMenu;
     
 
     public void ActivePause ()
     {
         
         Time.timeScale = 0f;
-        audio = EventSystem.GetComponent<AudioSource>();
-        audio.Pause();
+        audioMenu = EventSystem.GetComponent<AudioSource>();
+        audioMenu.Pause();
         pauseCanvas.SetActive(true);
     }
 
@@ -24,8 +24,8 @@ public class MenuPause : MonoBehaviour {
     {
         
         pauseCanvas.SetActive(false);
-        audio = EventSystem.GetComponent<AudioSource>();
-        audio.Play();
+        audioMenu = EventSystem.GetComponent<AudioSource>();
+        audioMenu.Play();
         Time.timeScale = 1f;
     }
 
