@@ -48,7 +48,6 @@ public class Laser : Enemy
         if (collider.gameObject.tag == "Player" && collider.gameObject.GetComponent<Player>().life>0)
         {
             collider.gameObject.GetComponent<Player>().Damage(damage);
-            Debug.Log("yousk2");
         }
     }
 }

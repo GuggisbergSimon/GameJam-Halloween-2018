@@ -5,17 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class GameOverButton : MonoBehaviour
 {
-	private AudioSource audio;
+	private AudioSource audioGameOver;
 
 	public void Start()
 	{
-		audio = GetComponent<AudioSource>();
+		audioGameOver = GetComponent<AudioSource>();
 	}
 
     public void YesButton()
     {
         //Load l'ancien niveau
-	    audio.Play();
+	    audioGameOver.Play();
         Time.timeScale = 1f;
         SceneManager.LoadScene("SampleScene");
     }
@@ -23,7 +23,7 @@ public class GameOverButton : MonoBehaviour
     public void NoButton()
     {
         //Load le Menu
-		audio.Play();
+		audioGameOver.Play();
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }

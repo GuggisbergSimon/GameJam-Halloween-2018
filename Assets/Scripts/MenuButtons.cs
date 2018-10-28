@@ -6,16 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
-	private AudioSource audio;
+	private AudioSource audioMenu;
 
 	public void Start()
 	{
-		audio = GetComponent<AudioSource>();
+		audioMenu = GetComponent<AudioSource>();
 	}
 
     public void PlayGame ()
 	{
-		audio.Play();
+		audioMenu.Play();
         //Load le prochain niveau
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -23,7 +23,7 @@ public class MenuButtons : MonoBehaviour
 
     public void QuitGame ()
     {
-	    audio.Play();
+	    audioMenu.Play();
 		Application.Quit();
     }
 
