@@ -5,11 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    public  GameObject [] Enemy;
-
-    private int y;
-    [SerializeField] private float nextActionTime = 5f;
-    [SerializeField] private float period = 0.1f;
+    public  GameObject [] Enemy; // prefab des enemies
+    
+    [SerializeField] private float nextActionTime = 5f; // temps initial entre chaque spawn
+    [SerializeField] private float period = 0.1f; // augmentation du temps entre chaque spawn
     // Use this for initialization
     void Start ()
     {
@@ -22,7 +21,7 @@ public class SpawnEnemy : MonoBehaviour
         if (Time.timeSinceLevelLoad > nextActionTime)
 	    {
 	        nextActionTime += period;
-	        Instantiate(Enemy[Random.Range(0, Enemy.Length)], new Vector3(25, Random.Range(-4, 4), 1), new Quaternion(0, 0, 0, 0));
+	        Instantiate(Enemy[Random.Range(0, Enemy.Length)], new Vector3(25, Random.Range(-4, 4), 1), new Quaternion(0, 0, 0, 0)); //Vector 3 = position aléatoire sur l'axe y
 	        if (period > 1)
 	        {
 	            period /= 1.5f;

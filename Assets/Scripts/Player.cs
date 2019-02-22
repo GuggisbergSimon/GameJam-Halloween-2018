@@ -34,7 +34,18 @@ public class Player : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		float v = Input.GetAxis("Vertical");
+		
+        
+	    float v = Input.GetAxis("Vertical");
+        Debug.Log(v);
+
+	    if (Input.touchCount > 0)
+	    {
+	        Touch myTouch = Input.touches[0];
+	        v = Camera.main.ScreenToWorldPoint(myTouch.position).y - gameObject.transform.position.y;
+	    }
+
+
 	    if ((gameObject.transform.position.y > 4.3 && v > 0) ||
 	        (gameObject.transform.position.y < -4.3 && v < 0))
 	    {
